@@ -25,7 +25,7 @@ for infile in glob.glob("*.html"):
 
         print('Файл', infile, 'редактируется')
 
-        with open(infile, 'w') as f:
+        with open(infile, 'w', encoding='utf-8', errors='replace') as f:
              for line in lines:
                  if ":::" not in line:
                      if "div" not in line:
